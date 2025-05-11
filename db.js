@@ -1,11 +1,10 @@
 // db.js
-const { Pool } = require('pg');
-require('dotenv').config(); // <-- yeh line add karo
+const { Pool } = require('pg'); //
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL, // ye Render pe seedha ENV se ayega
   ssl: {
-    rejectUnauthorized: false, // Render ke liye SSL zaroori hai
+    rejectUnauthorized: false,
   },
 });
 
